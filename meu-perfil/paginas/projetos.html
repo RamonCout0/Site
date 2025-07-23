@@ -73,8 +73,9 @@
       Jogo estilo arcade baseado no clássico Missile Command. Feito em Assembly MIPS com suporte ao Bitmap Display no MARS. Inclui explosões e colisões visuais.
     </p>
     <div class="screenshots">
-      <img src="https://i.imgur.com/obYqUkl.png" alt="Gameplay Missile 1" tabindex="0" />
-      <img src="https://i.imgur.com/ZzpgAqk.png" alt="Gameplay Missile 2" tabindex="0" />
+      <img src="../img/quarto 404.png" alt="o quarto" tabindex="0" />
+      <img src="../img/Wilian Apon.png" alt="wilian" tabindex="0" />
+      <img src="../img/BUGUDU.png" alt="bugudu" tabindex="0"/>
     </div>
     <a class="botao-github" href="https://github.com/seuusuario/missile-command" target="_blank" rel="noopener noreferrer" data-pt="Ver no GitHub" data-en="View on GitHub">Ver no GitHub</a>
     <a class="botao-ver-mais" href="../paginas/categoria.html" data-pt="Ver mais" data-en="See more">Ver mais</a>
@@ -93,6 +94,34 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
  <script src="../Scripts/index.js"></script>
+ <script>
+ 
+
+  // Modal de imagem
+  const modal = document.getElementById('image-modal');
+  const modalImg = modal.querySelector('img');
+
+  document.querySelectorAll('.screenshots img').forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      modal.classList.add('open');
+    });
+    // Também abre ao pressionar Enter (acessibilidade)
+    img.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        img.click();
+      }
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.classList.remove('open');
+    modalImg.src = '';
+    modalImg.alt = '';
+  });
+</script>
 
 </body>
 </html>
