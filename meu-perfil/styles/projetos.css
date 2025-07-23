@@ -1,0 +1,195 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: #1a0033;
+  color: #ccc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+}
+
+/* Header e Navegação */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #330066;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px #6600cc;
+  z-index: 10;
+  font-size: 12px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+nav a {
+  color: #33ccff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #33ccff;
+}
+
+.language-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #33ccff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.language-wrapper i {
+  text-shadow: 0 0 6px #33ccff;
+}
+
+#language-select {
+  background: #330066;
+  border: 2px solid #33ccff;
+  color: #33ccff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#language-select:hover {
+  background: #33ccff;
+  color: #1a0033;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 700px;
+  width: 100%;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #6600cc;
+  padding: 20px;
+  color: #ccc;
+}
+
+/* Título da página */
+h1.titulo-pagina {
+  color: #33ccff;
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Card de projeto */
+.project-card-v2 {
+  background: #330066;
+  border: 2px solid #33ccff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px #33ccff;
+}
+
+.project-card-v2 h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #66ccff;
+}
+
+.project-card-v2 p {
+  font-size: 9px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  color: #aaa;
+}
+
+/* Screenshots */
+.screenshots {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.screenshots img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #33ccff;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #33ccff;
+  transition: transform 0.3s ease;
+}
+
+.screenshots img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ccff;
+}
+
+/* Botões */
+.botao-github,
+.botao-ver-mais {
+  background: #33ccff;
+  color: #1a0033;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.botao-github:hover,
+.botao-ver-mais:hover {
+  background: #00ccff;
+  color: #000;
+  text-shadow: none;
+}
+
+/* Modal de Imagem */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 4px solid #33ccff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #33ccff;
+}
